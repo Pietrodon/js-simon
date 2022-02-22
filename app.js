@@ -16,14 +16,14 @@ let estrazione = fiverandomNumber(5);
 function fiverandomNumber(numeri){
     const number = [];
     do {        
-        const num = getRandomIntInclusive(1,100);
+        const num = getRandomIntInclusive(1,20);
         number.push(num)
         // console.log(num)
 
     } while (number.length < numeri ) ;
     return number;
 }
-console.log(estrazione)
+console.log(estrazione,typeof estrazione[1])
 
 
 // creazione alert per dire all'utente quali numeri deve memotizzare
@@ -34,13 +34,26 @@ alert(`i numeri da memorizzare sono: ${estrazione}`);
 
 
 // richiesta all'utente di inserire i numeri
-
-let insime = [];
+let arrayNumber = [];
 for (let i=0;i<5;i++){
-    let richiesta = prompt('inserisci i numeri che ti ricordi')
-    insime.push(richiesta)
+    let richiesta = parseInt(prompt(`inserisci i numeri che ti ricordi`))
+    arrayNumber.push(richiesta)
 }
-console.log(insime)
+console.log(arrayNumber, typeof arrayNumber[2])
+
+// verifica se l'utente ha inserito i numeri corretti
+for (let i = 0; i < arrayNumber.length; i++) {
+    let controllo = false;
+    if(estrazione[i] === arrayNumber[i]){
+     controllo = true;
+    }
+    console.log(controllo)
+}
+if (controllo){
+    console.log(`il tuo punteggio sale`)
+}
+
+
 
 
 
