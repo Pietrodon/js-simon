@@ -25,13 +25,22 @@ function fiverandomNumber(numeri){
 }
 console.log(estrazione)
 
+
 // creazione alert per dire all'utente quali numeri deve memotizzare
-// console.log ('i numeri da memorizzare sono:' ${estrazione});
+alert(`i numeri da memorizzare sono: ${estrazione}`);
+
+// funzione timing 
 
 
 
 // richiesta all'utente di inserire i numeri
 
+let insime = [];
+for (let i=0;i<5;i++){
+    let richiesta = prompt('inserisci i numeri che ti ricordi')
+    insime.push(richiesta)
+}
+console.log(insime)
 
 
 
