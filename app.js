@@ -25,7 +25,13 @@ function fiverandomNumber(numeri){
 }
 console.log(estrazione)
 
-creazione 
+// creazione alert per dire all'utente quali numeri deve memotizzare
+// console.log ('i numeri da memorizzare sono:' ${estrazione});
+
+
+
+// richiesta all'utente di inserire i numeri
+
 
 
 
