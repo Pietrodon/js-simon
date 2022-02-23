@@ -23,7 +23,7 @@ function fiverandomNumber(numeri){
     } while (number.length < numeri ) ;
     return number;
 }
-console.log(estrazione,typeof estrazione[1])
+console.log(estrazione)
 
 
 // creazione alert per dire all'utente quali numeri deve memotizzare
@@ -39,19 +39,34 @@ for (let i=0;i<5;i++){
     let richiesta = parseInt(prompt(`inserisci i numeri che ti ricordi`))
     arrayNumber.push(richiesta)
 }
-console.log(arrayNumber, typeof arrayNumber[2])
+console.log(arrayNumber)
 
 // verifica se l'utente ha inserito i numeri corretti
+// dichiarazione variabili 
+let controllo;
+let contatore = 0;
+// ciclo for per stabilire l'uguaglianza dei valori
 for (let i = 0; i < arrayNumber.length; i++) {
-    let controllo = false;
+    controllo = false;
     if(estrazione[i] === arrayNumber[i]){
-     controllo = true;
+        controllo = true;
+        // aggiunta punteggio se il numero inserito è corretto
+        contatore  = contatore +1;
+        
+    } else {
+        // riduzione punteggio se numero inserito è sbagliato
+        contatore = contatore -1;
     }
-    console.log(controllo)
+    
 }
-if (controllo){
-    console.log(`il tuo punteggio sale`)
+// dichiarazione punteggio finale
+if(contatore>0){
+    alert(`Bravo hai vinto con un punteggio di ${contatore}`)
+} else{
+    alert(`Mi dispiace hai perso`)
 }
+console.log(`il tuo punteggio è ${contatore}`)
+
 
 
 
