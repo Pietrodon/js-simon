@@ -29,26 +29,37 @@ console.log(estrazione)
 // creazione alert per dire all'utente quali numeri deve memotizzare
 alert(`i numeri da memorizzare sono: ${estrazione}`);
 
+
+
 // funzione timing 
 
+setTimeout (start,30000);
+function start(params) {
+    alert(`il gioco sta per partire`)
+}
 
 
 // richiesta all'utente di inserire i numeri
+
 let arrayNumber = [];
+
 for (let i=0;i<5;i++){
     let richiesta = parseInt(prompt(`inserisci i numeri che ti ricordi`))
     arrayNumber.push(richiesta)
 }
-console.log(arrayNumber)
 
+console.log(arrayNumber)
 // verifica se l'utente ha inserito i numeri corretti
 // dichiarazione variabili 
 let controllo;
 let contatore = 0;
 // ciclo for per stabilire l'uguaglianza dei valori
 for (let i = 0; i < arrayNumber.length; i++) {
+    
     controllo = false;
+    
     if(estrazione[i] === arrayNumber[i]){
+    
         controllo = true;
         // aggiunta punteggio se il numero inserito è corretto
         contatore  = contatore +1;
@@ -61,10 +72,13 @@ for (let i = 0; i < arrayNumber.length; i++) {
 }
 // dichiarazione punteggio finale
 if(contatore>0){
+
     alert(`Bravo hai vinto con un punteggio di ${contatore}`)
 } else{
+
     alert(`Mi dispiace hai perso`)
 }
+
 console.log(`il tuo punteggio è ${contatore}`)
 
 
