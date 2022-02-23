@@ -33,18 +33,15 @@ alert(`i numeri da memorizzare sono: ${estrazione}`);
 
 // funzione timing 
 
-setTimeout (start,30000);
-function start(params) {
-    alert(`il gioco sta per partire`)
-}
-
-
-// richiesta all'utente di inserire i numeri
+setTimeout (() =>{
+   // richiesta all'utente di inserire i numeri
 
 let arrayNumber = [];
 
 for (let i=0;i<5;i++){
+    
     let richiesta = parseInt(prompt(`inserisci i numeri che ti ricordi`))
+    
     arrayNumber.push(richiesta)
 }
 
@@ -79,7 +76,13 @@ if(contatore>0){
     alert(`Mi dispiace hai perso`)
 }
 
-console.log(`il tuo punteggio è ${contatore}`)
+console.log(`il tuo punteggio è ${contatore}`)}
+ , 30000 );
+
+
+
+
+
 
 
 
